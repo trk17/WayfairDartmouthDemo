@@ -1,4 +1,6 @@
 # WayfairDartmouthDemo
+## Welcome
+Welcome Dartmouth students! In this demo you'll learn about React JS and how we use it at Wayfair
 
 ## Prerequisites
 - NPM
