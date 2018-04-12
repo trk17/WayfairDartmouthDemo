@@ -29,17 +29,21 @@ export default class ParentComponent extends Component {
           <input
             type="text"
             name="numbers"
+            className="form-check-input"
+            placeholder="Enter your number"
             onChange={event => this.onInputChange(event.target.value)}
           />
           <input
             type="button"
             name="number_button"
+            className="btn btn-primary"
             value="submit"
             onClick={this.addNumberToArray}
           />
           <input
             type="button"
             name="clear_button"
+            className="btn btn-danger"
             value= "clear array"
             onClick={this.clearNumber}
           />
