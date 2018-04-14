@@ -25,7 +25,7 @@ export default class ParentComponent extends Component {
 
   render() {
     return (
-      <div>
+      <div className="stateDemo">
       {/* everything needs to be in one div */}
         <h1>Lets learn about state, folks</h1>
           <p>Enter a number:</p>
@@ -62,6 +62,9 @@ export default class ParentComponent extends Component {
           <br/>
            <ChildComponent
                pictureNumberArray={this.state.numberArray}
+          />
+          <ChildComponent
+              pictureNumberArray={this.state.numberArray}
           />
       </div>
     );

@@ -71,7 +71,7 @@ export default class DisplayChart extends Component {
         return (
             <div>
                 <h1>Pretty Chart</h1>
-                  <PieChart width={3200} height={1600}>
+                  <PieChart width={500} height={500}>
                       <Pie
                           activeIndex={this.state.activeIndex}
                           activeShape={this.renderActiveShape}
@@ -80,7 +80,7 @@ export default class DisplayChart extends Component {
                           cy={200}
                           innerRadius={60}
                           outerRadius={80}
-                          fill="#8884d8"
+                          fill="#fff"
                           onMouseEnter={this.onPieEnter}
                           dataKey="value"
                       />

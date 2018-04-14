@@ -23,11 +23,17 @@ export default class ChildComponent extends Component {
         return (
             <div>
                 <h3>Picture Time:</h3>
-                {this.props.pictureNumberArray.map( index => (
-                     <img src={picArray[index % 5]} />
-                    )
+                <div className="row thumbnail">
+                    {this.props.pictureNumberArray.map( index => (
+                            <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                <img src={picArray[index % 5]} />
+                            </div>
 
-                )}
+                        )
+
+                    )}
+                </div>
+
             </div>
         );
     }
