@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import App from './components/app'
-import ParentComponent from './components/componentsExample/example2'
+import ParentComponent from './components/componentsExample/parentComponent'
 
 //EXAMPLE 1:HELLO WORLD
 
