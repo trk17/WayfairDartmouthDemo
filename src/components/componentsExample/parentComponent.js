@@ -60,8 +60,8 @@ export default class ParentComponent extends Component {
             {this.state.numberArray.toString()}
           </div>}
           <br/>
-          <ChildComponent
-              pictureNumberArray={this.state.numberArray}
+           <ChildComponent
+               pictureNumberArray={this.state.numberArray}
           />
       </div>
     );

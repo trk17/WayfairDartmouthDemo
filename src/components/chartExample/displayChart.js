@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import Chart from 'chart.js';
 import {PieChart, Pie, Sector} from 'recharts';
 
-const data = [{name: 'Nerds', value: 400}, {name: 'Goobers', value: 300},
-    {name: 'Job-Seekers', value: 300}, {name: 'I Got Lost', value: 200}];
+export default class DisplayChart extends Component {
 
-const sleepingData = [{name: 'Code', value: 400}, {name: 'Partying', value: 1},
-    {name: 'Friendship', value: 5}, {name: 'Insomnia', value: 200}];
+    static propTypes = {
+        data: React.PropTypes.array
+    };
 
-export default class ChartExample extends Component {
+    static defaultProps = {
+        data: []
+    };
+
     state = {
     };
 
@@ -65,39 +68,23 @@ export default class ChartExample extends Component {
     };
 
     render() {
-
         return (
             <div>
-                <h1>chart lyfe</h1>
-                <h2> People Who Attend Hackathons:</h2>
-                <PieChart width={3200} height={1600}>
-                    <Pie
-                        activeIndex={this.state.activeIndex}
-                        activeShape={this.renderActiveShape}
-                        data={data}
-                        cx={300}
-                        cy={200}
-                        innerRadius={60}
-                        outerRadius={80}
-                        fill="#8884d8"
-                        onMouseEnter={this.onPieEnter}
-                    />
-                </PieChart>
-
-                <h2> Why am I awake at 3am?</h2>
-                <PieChart width={3200} height={1600}>
-                    <Pie
-                        activeIndex={this.state.activeIndex}
-                        activeShape={this.renderActiveShape}
-                        data={sleepingData}
-                        cx={300}
-                        cy={200}
-                        innerRadius={60}
-                        outerRadius={80}
-                        fill="#8884d8"
-                        onMouseEnter={this.onPieEnter}
-                    />
-                </PieChart>
+                <h1>Pretty Chart</h1>
+                  <PieChart width={3200} height={1600}>
+                      <Pie
+                          activeIndex={this.state.activeIndex}
+                          activeShape={this.renderActiveShape}
+                          data={this.props.data}
+                          cx={300}
+                          cy={200}
+                          innerRadius={60}
+                          outerRadius={80}
+                          fill="#8884d8"
+                          onMouseEnter={this.onPieEnter}
+                          dataKey="value"
+                      />
+                  </PieChart>
             </div>
         );
     }
